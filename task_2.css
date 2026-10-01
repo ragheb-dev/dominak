@@ -1,0 +1,198 @@
+/* تصفير الهوامش والمسافات الافتراضية للمتصفحات */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* تنسيق الهيدر العلوي */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 50px; /* الـ padding اليمين صفر ليلتصق الزرار بالحافة تماماً */
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    height: 75px;
+}
+
+/* ضبط مقاس اللوجو */
+.logo img {
+    height: 25px; 
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* سهم المنيو الصغير الرمادي */
+.arrow-nav {
+    font-size: 10px;
+    color: #555555;
+}
+
+/* تمييز كلمة Blog باللون البرتقالي */
+nav a.active-blog {
+    color: #ffaa00;
+}
+
+/* الجزء الأيمن (اللغة والزرار) */
+.right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.lang-selector {
+    font-size: 14px;
+    color: #222222;
+    font-weight: bold;
+    margin-right: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* السهم البرتقالي الصغير المخصص للغة */
+.arrow-lang {
+    font-size: 10px;
+    color: #ffaa00;
+}
+
+/* زرار الـ Contact المتدرج بالكامل مع السهم */
+.contact-btn {
+    background: linear-gradient(to right, #ffaa00 0%, #ff6a00 60%, #ff4500 100%);
+    color: white;
+    border: none;
+    height: 100%;
+    padding: 0 45px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 45px; /* مسافة واضحة بين الكلمة والسهم لحرية الرؤية */
+}
+
+.btn-arrow {
+    font-size: 16px;
+}
+
+/* تصميم الـ Hero الممتد بالكامل مع معالجة اندماج الخلفية */
+.hero {
+    background-color: #4e5359; /* لون الرمادي المعتمد الدافئ */
+    background-image: url('Frame.png'); /* 💡 تم استخدام الاسم المظبوط Frame.png */
+    background-repeat: no-repeat;
+    background-position: right 6% center; /* دفع الأقواس لليمين قليلاً وتوسيطها عمودياً */
+    background-size: auto 82%; /* حجم مناسب يطابق الصورة الأصلية */
+    background-blend-mode: luminosity; /* دمج لوني ممتاز لجعل الأقواس تبدو بلون رمادي متناسق وفاتح */
+    
+    padding: 40px 50px;
+    color: white;
+    min-height: calc(100vh - 75px); /* ملء المساحة الرأسية المتبقية من الشاشة بالكامل */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+/* الدائرة البرتقالية الحرة المتموضعة في نهاية الأقواس */
+.orange-dot {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #ff9400;
+    border-radius: 50%;
+    right: 5.2%; /* تقع بالضبط أمام النقطة الأخيرة من القوس المكتمل */
+    top: 52%;
+}
+
+/* مسار التنقل العلوي للـ Hero */
+.breadcrumb {
+    font-size: 13px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #cccccc;
+}
+
+.breadcrumb i {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.breadcrumb a {
+    color: #ffaa00;
+    text-decoration: none;
+}
+
+/* الحاوية الأساسية للصورة الشخصية والنصوص */
+.hero-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 45px;
+}
+
+/* صورة دومينيك الشخصية مع تظليل ناعم وعميق */
+.hero-image img {
+    width: 240px;
+    border-radius: 2px;
+    box-shadow: 8px 18px 35px rgba(0, 0, 0, 0.5); /* إضافة ظل واقعي يبرز الصورة عن الخلفية */
+    display: block;
+}
+
+/* معالجة نصوص السيرة الذاتية */
+.hero-text h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.hero-text h3 {
+    font-size: 16px;
+    color: #dddddd;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+/* الخط الأفقي البرتقالي الصغير أسفل المسمى الوظيفي */
+.hero-text .line {
+    width: 30px;
+    height: 4px;
+    background-color: #ff9400;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e8e8e8;
+    max-width: 640px;
+}
+
+/* إبراز العبارات العريضة (Bold) تماماً كالتصميم المتوقع */
+.hero-text p strong {
+    color: #ffffff;
+    font-weight: bold;
+}
